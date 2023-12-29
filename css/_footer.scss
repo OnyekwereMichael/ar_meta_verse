@@ -1,0 +1,50 @@
+footer {
+  @include footer;
+}
+.white {
+  color: #fff;
+  font-family: Poppins;
+}
+.mar {
+  margin-top: 10px;
+  font-family: Poppins;
+}
+.veta {
+  background: var(--2, linear-gradient(97deg, #f86cf8 12.04%, #64cef5 81.84%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: -25px;
+  font-family: Orbitron;
+}
+
+.about {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-family: Orbitron;
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    @include foo;
+  }
+  .veta {
+    // margin: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  footer {
+    @include foo;
+    padding: 0;
+  }
+  .mar,
+  .about,
+  .imj {
+    margin: 0 10px 0 10px;
+  }
+  .imj {
+    margin-top: 10px;
+  }
+}

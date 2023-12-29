@@ -1,0 +1,260 @@
+h1 {
+    color: #fff;
+  }
+  .metaV{
+    font-family: Orbitron
+  }
+  .navbar {
+    @include navbar;
+  }
+  .link {
+    text-decoration: none;
+    margin-left: 20px;
+    color: #fff;
+    font-family: Poppins;
+  }
+  .first {
+    @include first;
+    font-family: Orbitron;
+  }
+  .explore {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+  }
+  span {
+    background: linear-gradient(97deg, #f86cf8 12.04%, #64cef5 81.84%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  .metaverse {
+    color: #fff;
+    font-weight: 600;
+    font-family: Orbitron;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  .vec {
+    margin-top: -200px;
+    margin-left: 100px;
+  }
+  .button_o {
+    margin-top: 10px;
+  }
+  .butt1 {
+    padding: 10px 20px 10px 20px;
+    background: linear-gradient(97deg, #d10ed1 12.04%, #10a3da 81.84%);
+    color: #fff;
+    border-radius: 5px;
+  }
+  .butt2 {
+    background-color: map-get($color, "black");
+    padding: 10px 20px 10px 20px;
+    border: 2px solid rgb(170, 3, 170);
+    border-radius: 5px;
+    color: #fff;
+  }
+  .followers {
+    display: flex;
+    gap: 50px;
+    margin-top: 15px;
+    color: #fff;
+    position: relative;
+    font-family: Orbitron;
+  }
+  .doings {
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Orbitron;
+  }
+  .likes {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Orbitron;
+  }
+  
+  .hamburger {
+    cursor: pointer;
+    position: relative;
+    width: 35px;
+    background: none;
+    height: 35px;
+    outline: none;
+    appearance: none;
+    border: none;
+  }
+  
+  .hamburger .bar,
+  .hamburger:after,
+  .hamburger:before {
+    content: "";
+    display: block;
+    //  width: 100%;
+    height: 5px;
+    background: linear-gradient(97deg, #d10ed1 12.04%, #10a3da 81.84%);
+    margin: 6px 0px;
+    transition: 0.4s;
+  }
+  
+  .hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-8px, 5px);
+  }
+  .hamburger.is-active:after {
+    transform: rotate(45deg) translate(-10px, -8px);
+  }
+  
+  .hamburger.is-active .bar {
+    opacity: 0;
+  }
+  
+  .mobile-nav {
+    display: inline-block;
+    // display: block;
+    background: linear-gradient(97deg, #d10ed1 12.04%, #10a3da 81.84%);
+    position: fixed;
+    right: -50%;
+    margin: 0 auto;
+    width: 40%;
+    height: 30vh;
+    z-index: 1;
+    border-radius: 10px;
+  }
+  
+  .mobile-nav a {
+    display: block;
+    padding-top: 25px;
+    margin-top: 5px;
+    text-align: center;
+    color: #000;
+    font-size: 25px;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .mobile-nav.is-active {
+    left: 0;
+    transition: 0.4s;
+  }
+  
+  .mobile-nav a:hover {
+    background-color: #fff;
+    text-decoration: underline;
+  }
+  
+
+  @media only screen and (max-width: 600px) {
+    .first {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+      }
+      .img1 {
+        width: 72%;
+        margin-top: 50px;
+        margin-left: -30px;
+      }
+      .followers {
+        margin-top: 100px;
+      }
+      nav {
+        display: none;
+      }
+      .explore {
+        font-size: 30px;
+      }
+      .rela {
+        position: absolute;
+        top: -499px;
+        left: -20px;
+        font-size: 25px;
+      }
+      .relat {
+        position: absolute;
+        top: -469px;
+        left: -20px;
+        font-size: 17px;
+        // display: none;
+      }
+      .rela_2 {
+        position: absolute;
+        top: -615px;
+        left: 80px;
+        font-size: 25px;
+        // display: none;
+      }
+      .relat_2 {
+        position: absolute;
+        top: -583px;
+        left: 82px;
+        font-size: 17px;
+        // display: none;
+      }
+      .rela_3 {
+        // display: none;
+        position: absolute;
+        top: -535px;
+        left: 300px;
+        font-size: 25px;
+        // margin-left: -10px;
+      }
+      .relat_3 {
+        position: absolute;
+        top: -505px;
+        left: 310px;
+        font-size: 17px;
+        margin-left: -10px;
+        // display: none;
+      }
+      .mobile-nav{
+        height: 35vh;
+      }
+  }
+
+  @media screen and (max-width: 400px) {
+    .rela {
+        position: $position;
+        top: -470px;
+        left: 10px;
+        font-size: 20px;
+      }
+      .relat {
+        position: $position;
+        top: -445px;
+        left: 10px;
+        font-size: 12px;
+      }
+    
+      .rela_2 {
+        position: $position;
+        top: -565px;
+        left: 80px;
+        font-size: 20px;
+      }
+      .relat_2 {
+        position: a$position;
+        top: -539px;
+        left: 83px;
+        font-size: 12px;
+      }
+    
+      .rela_3 {
+        position: $position;
+        top: -515px;
+        left: 280px;
+        font-size: 20px;
+        margin-left: 10px;
+      }
+      .relat_3 {
+        position: $position;
+        top: -490px;
+        left: 287px;
+        font-size: 12px;
+        margin-left: 3px;
+      }
+      
+      .what_2{
+       margin: 0 1px 0 1px;
+      }
+    
+  }
